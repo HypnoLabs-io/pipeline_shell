@@ -1,0 +1,15 @@
+[project]
+name = "pipeline-otio"
+version = "0.1.0"
+description = "OpenTimelineIO sidecar for pipeline_shell: inspect and convert editorial timelines."
+requires-python = ">=3.10"
+dependencies = [
+  "opentimelineio==0.18.1",
+  # EDL (cmx_3600), FCP7 XML, AAF and others, split out of core since 0.17.
+  "opentimelineio-plugins==0.18.1",
+  # FCPXML (Final Cut Pro X / Resolve) is not in the plugins bundle.
+  "otio-fcpx-xml-adapter==1.0.0",
+]
+
+[tool.uv]
+package = false
